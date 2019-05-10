@@ -1,0 +1,92 @@
+﻿@model FastLearn.Models.Registration
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Start Application</title>
+        <link rel="stylesheet" href="~/Content/bs4/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/Content/Styles/login.css" />
+        <link rel="stylesheet" href="~/Content/bs4/fonts/ionicons.min.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row mh-100vh">
+                <div class="col-lg-6 d-flex align-items-end" id="bg-block" style="background-image:url(&quot;pencil.jpg&quot;);background-size:cover;background-position:center center;">
+                </div>
+                <div class="col-10 col-sm-8 col-md-6 col-lg-6 offset-1 offset-sm-2 offset-md-3 offset-lg-0 align-self-center d-lg-flex align-items-lg-center align-self-lg-stretch bg-white p-5 rounded rounded-lg-0 my-5 my-lg-0"
+                     id="login-block">
+                    <div class="m-auto w-lg-75 w-xl-50">
+                        <h2 class="text-info font-weight-light mb-5">
+                            <i class="fa fa-diamond"></i>Start Your Application
+                        </h2>
+                        <!--<form>
+                            <div class="form-group">
+                                <label class="text-secondary">Name</label>
+                                <input class="form-control" type="text" id="Name" name="Name" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-secondary">Email</label>
+                                <input class="form-control" type="email" required id="Email" name="Email"
+                                       inputmode="email" />
+                            </div>
+                               <div class="form-group">
+                                <label class="text-secondary">Phone</label>
+                                <input class="form-control" type="tel" required id="Phone" name="Phone" inputmode="tel" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-secondary">Address</label>
+                                <input class="form-control" type="text" required
+                                       inputmode="tel" id="Address" name="Address" />
+                            </div>
+                            <div class="form-group">
+                                <label class="text-secondary">Password</label>
+                                <input class="form-control" type="password" required  id="Password" name="Password" />
+                              </div>
+                            <button class="btn btn-info mt-2" type="submit">Log In</button>
+                        </form>-->
+
+                        @using (Html.BeginForm("Registration", "Home"))
+                        {
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Name)
+                                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Name)
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email)
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Email)
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Phone)
+                                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Phone)
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Address)
+                                @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Address)
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password)
+                                @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Password)
+                            </div>
+                            <button class="btn btn-info mt-2" type="submit">Log In</button>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

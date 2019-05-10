@@ -1,0 +1,9 @@
+﻿body {
+}
+.table {
+    padding:30px;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th{
+    background-color:steelblue;
+    color:whitesmoke;
+}

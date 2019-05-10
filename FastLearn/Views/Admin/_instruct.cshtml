@@ -1,0 +1,34 @@
+﻿@model IEnumerable<FastLearn.Models.GetInstructor>
+<div class="page-header">
+    <h3>Instructor</h3>
+</div>
+@if (Model != null)
+{
+<table class="table table-striped table-condensed">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAddress)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FAddress)
+            </td>
+        </tr>
+    }
+
+</table>
+}else
+{
+<div>No Record</div>
+}

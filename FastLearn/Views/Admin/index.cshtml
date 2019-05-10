@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin Home Page</title>
+    <link  href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <link  href="~/Content/Styles/AdminH.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+             <div class="page-header">
+                  <h1>Administrator</h1>
+             </div>
+        <ul class="nav justify-content-center nav-pills flex-column">
+            <li class="active"><a data-toggle="tab" href="#home">Students</a></li>
+            <li><a data-toggle="tab" href="#menu1">Instructors</a></li>
+            <li><a data-toggle="tab" href="#menu2">Queries</a></li>
+            <li><a data-toggle="tab" href="#menu3">feedback</a></li>
+        </ul>
+
+       <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                @Html.Partial("_student")
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                
+                 </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+        </div> 
+
+    </div>
+
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+</body>
+</html>
